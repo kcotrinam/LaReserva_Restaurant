@@ -13,6 +13,16 @@ const sassRules =  {
   ]
 }
 
+const fileLoaderRules =  {
+  test: /\.(png|jpe?g|gif)$/i,
+  loader: 'file-loader',
+  options: {
+    outputPath: 'images',
+    name: '[name].[ext]'
+  },
+}
+
+
 const javascriptRules = {
   test: /\.m?js$/,
   exclude: /node_modules/,
@@ -38,7 +48,8 @@ module.exports = {
   module: {
     rules: [
       javascriptRules,
-      sassRules
+      sassRules,
+      fileLoaderRules
     ]
   } 
 }
