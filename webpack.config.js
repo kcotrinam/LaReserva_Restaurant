@@ -1,5 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const sassRules =  {
+  test: /\.s[ac]ss$/i,
+  exclude: /node_modules/,
+  use: [
+    // Creates `style` nodes from JS strings
+    "style-loader",
+    // Translates CSS into CommonJS
+    "css-loader",
+    // Compiles Sass to CSS
+    "sass-loader",
+  ]
+}
+
 const javascriptRules = {
   test: /\.m?js$/,
   exclude: /node_modules/,
@@ -24,7 +37,8 @@ module.exports = {
   ],
   module: {
     rules: [
-      javascriptRules
+      javascriptRules,
+      sassRules
     ]
   } 
 }
