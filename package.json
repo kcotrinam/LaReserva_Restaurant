@@ -1,0 +1,29 @@
+{
+  "name": "LaReserva_Restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcotrinam/LaReserva_Restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcotrinam/LaReserva_Restaurant/issues"
+  },
+  "homepage": "https://github.com/kcotrinam/LaReserva_Restaurant#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0"
+  }
+}
