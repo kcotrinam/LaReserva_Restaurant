@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const javascriptRules = {
   test: /\.m?js$/,
   exclude: /node_modules/,
@@ -11,9 +13,18 @@ const javascriptRules = {
 }
 
 module.exports = {
+  output: {
+    filename: 'app.[hash].js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        title: 'La Reserva Restaurant',
+        template: './src/index.html'
+      })
+  ],
   module: {
     rules: [
       javascriptRules
     ]
-  }
+  } 
 }
