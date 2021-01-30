@@ -37,7 +37,7 @@ const javascriptRules = {
 
 module.exports = {
   output: {
-    filename: 'app.[hash].js',
+    filename: 'app.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
