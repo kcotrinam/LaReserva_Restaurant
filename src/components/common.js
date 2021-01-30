@@ -23,3 +23,14 @@ export const newLinks = (classes, texts, links) => {
   })
   return ul;
 }
+
+export const newList = (classes, texts) => {
+  const ul = document.createElement('ul');
+  texts.forEach((txt, idx) => {
+    const li = document.createElement('li');
+    li.innerText = txt
+    li.classList.add(classes[idx]);
+    ul.append(li)
+  })
+  return ul;
+}
