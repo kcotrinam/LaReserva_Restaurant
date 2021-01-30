@@ -1,15 +1,15 @@
 import { header } from './components/header';
-import { carrousel } from './components/carrousel';
-import { section } from './components/section';
-import { Dishes } from './components/dishes';
-import { Offer } from './components/offers';
+import { Tabs } from './components/tabs';
+
+
 
 import { Footer } from './components/footer';
+import styles from './scss/styles.scss';
 
 const container = document.querySelector('.content')
-const nav = new header();
-// nav.createLinks()
-nav.tabs()
 
-const newfooter = new Footer(container)
-newfooter.renderFooter()
+const headerContainer = new header(container);
+headerContainer.renderHeader()
+
+const foot = new Footer(container)
+foot.renderFooter()

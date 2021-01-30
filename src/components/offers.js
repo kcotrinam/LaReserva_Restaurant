@@ -14,6 +14,7 @@ export class Offer {
   }
 
   get title () {
+    this.container.innerHTML = ''
     const offersContainer = newElment('section', undefined, ['offers']);
     const title = newElment('h2', 'Offers', ['offers__title']);
     offersContainer.append(title);
@@ -35,7 +36,7 @@ export class Offer {
     this.main.append(cardContainer);
   }
 
-  renderOffers() {
+  get renderOffers() {
     this.title
     this.banner
     this.displaycards

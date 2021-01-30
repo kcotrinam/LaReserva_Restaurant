@@ -4,17 +4,18 @@ import img2 from './../img/banner/banner2.png';
 import img3 from './../img/banner/banner3.png';
 
 export const carrousel= () => {
+  const container  = document.querySelector('.content')
+  // container.innerHTML = ''
   const imgCollection = [img1, img2, img3]
-  const container = document.querySelector('.content');
   const imgcontainer =  newElment('img');
   setInterval(() => {
-    // displayCarrousel(imgcontainer, imgCollection)
+    displayCarrousel(imgcontainer, imgCollection)
     imgcontainer.src = img1
   }, 1000);
   container.append(imgcontainer)
 }
 
-let n = 1
+let n = 0
 const displayCarrousel = (carrouselContainer, img) => {
   if(n > 2) {
     n = 0

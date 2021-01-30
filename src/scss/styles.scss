@@ -4,3 +4,7 @@
 @import 'utils/functions';
 @import 'utils/helpers';
 @import 'layout/grid';
+
+.active-tab {
+  color: red;
+}

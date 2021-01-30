@@ -13,7 +13,6 @@ import grill from './../img/grill/grill.jpg'
 export class Dishes {
   constructor (container) {
     this.container = container;
-    this.main = newElment('main');
     this.imgByRegion = [coast, sierra, selva];
     this.imgPasta = [lasagna, ravioles, spaghetti];
     this.imgSeaFood = [mariscos, ceviche, chupe];
@@ -21,8 +20,9 @@ export class Dishes {
   }
 
   get title () {
+    this.container.innerHTML = '';
     const title = newElment('h2', 'Our Dishes');
-    this.main.append(title)
+    this.container.append(title)
   }
 
   subtitle(content) {
@@ -39,15 +39,15 @@ export class Dishes {
     card.append(this.subtitle(`${subtitle}`))
     card.append(imgcontainer)
 
-    this.main.append(card)
+    this.container.append(card)
   }
 
-  render () {
+  get renderDishes () {
     this.title
     this.article('Regional Dishes', this.imgByRegion)
     this.article('Pastas', this.imgPasta)
     this.article('Seafood', this.imgSeaFood)
     this.article('Meat and Grill', this.imgGrill)
-    this.container.append(this.main)
+    
   }
 }
