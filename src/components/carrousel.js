@@ -8,9 +8,9 @@ export const carrousel= (container) => {
   const imgCollection = [img1, img2, img3]
   const imgcontainer =  newElment('img');
   imgcontainer.src = img1
-  
+
   setInterval(() => {
-    // displayCarrousel(imgcontainer, imgCollection)
+    displayCarrousel(imgcontainer, imgCollection)
   }, 1000);
   container.append(imgcontainer)
 }
