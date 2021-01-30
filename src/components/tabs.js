@@ -50,7 +50,7 @@ export class Tabs {
     switch (tabIdx) {
       case 0:
         const loc = new Home(this.main);
-        // carrousel(this.main)
+        carrousel(this.main)
         loc.location()
         break;
       case 1:
