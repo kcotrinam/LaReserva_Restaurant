@@ -44,3 +44,7 @@ export const createImageCollection = (container, imgCollection) => {
 
   return container
 };
+
+export const createCards = (titles, images) => {
+  const card = newElment('article')
+}
