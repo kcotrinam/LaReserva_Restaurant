@@ -26,7 +26,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newElment\": () => /* binding */ newElment,\n/* harmony export */   \"newLinks\": () => /* binding */ newLinks,\n/* harmony export */   \"newList\": () => /* binding */ newList\n/* harmony export */ });\nvar newElment = function newElment(tag, text, classes, id) {\n  var element = document.createElement(tag);\n  if (text) element.innerText = text;\n\n  if (classes) {\n    classes.forEach(function (cl) {\n      element.classList.add(cl);\n    });\n  }\n\n  if (id) element.id = id;\n  return element;\n};\nvar newLinks = function newLinks(classes, texts, links) {\n  var ul = document.createElement('ul');\n  texts.forEach(function (txt, idx) {\n    var li = document.createElement('li');\n    var a = document.createElement('a');\n    a.innerText = txt;\n    a.classList.add(classes[idx]);\n    a.href = links[idx];\n    li.append(a);\n    ul.append(li);\n  });\n  return ul;\n};\nvar newList = function newList(classes, texts) {\n  var ul = document.createElement('ul');\n  texts.forEach(function (txt, idx) {\n    var li = document.createElement('li');\n    li.innerText = txt;\n    li.classList.add(classes[idx]);\n    ul.append(li);\n  });\n  return ul;\n};\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/components/common.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newElment\": () => /* binding */ newElment,\n/* harmony export */   \"newLinks\": () => /* binding */ newLinks,\n/* harmony export */   \"newList\": () => /* binding */ newList,\n/* harmony export */   \"createImageCollection\": () => /* binding */ createImageCollection\n/* harmony export */ });\nvar newElment = function newElment(tag, text, classes, id) {\n  var element = document.createElement(tag);\n  if (text) element.innerText = text;\n\n  if (classes) {\n    classes.forEach(function (cl) {\n      element.classList.add(cl);\n    });\n  }\n\n  if (id) element.id = id;\n  return element;\n};\nvar newLinks = function newLinks(classes, texts, links) {\n  var ul = document.createElement('ul');\n  texts.forEach(function (txt, idx) {\n    var li = document.createElement('li');\n    var a = document.createElement('a');\n    a.innerText = txt;\n    a.classList.add(classes[idx]);\n    a.href = links[idx];\n    li.append(a);\n    ul.append(li);\n  });\n  return ul;\n};\nvar newList = function newList(classes, texts) {\n  var ul = document.createElement('ul');\n  texts.forEach(function (txt, idx) {\n    var li = document.createElement('li');\n    li.innerText = txt;\n    li.classList.add(classes[idx]);\n    ul.append(li);\n  });\n  return ul;\n};\nvar createImageCollection = function createImageCollection(container, imgCollection) {\n  imgCollection.forEach(function (img) {\n    var imgTag = newElment('img');\n    imgTag.src = img;\n    container.append(imgTag);\n  });\n  return container;\n};\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/components/common.js?");
+
+/***/ }),
+
+/***/ "./src/components/dishes.js":
+/*!**********************************!*\
+  !*** ./src/components/dishes.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Dishes\": () => /* binding */ Dishes\n/* harmony export */ });\n/* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common.js */ \"./src/components/common.js\");\n/* harmony import */ var _img_coast_coast_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../img/coast/coast.jpg */ \"./src/img/coast/coast.jpg\");\n/* harmony import */ var _img_coast_sierra_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../img/coast/sierra.jpg */ \"./src/img/coast/sierra.jpg\");\n/* harmony import */ var _img_coast_selva_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../img/coast/selva.jpg */ \"./src/img/coast/selva.jpg\");\n/* harmony import */ var _img_pasta_lasagna_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../img/pasta/lasagna.jpg */ \"./src/img/pasta/lasagna.jpg\");\n/* harmony import */ var _img_pasta_ravioles_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../img/pasta/ravioles.jpg */ \"./src/img/pasta/ravioles.jpg\");\n/* harmony import */ var _img_pasta_spaghetti_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../img/pasta/spaghetti.jpg */ \"./src/img/pasta/spaghetti.jpg\");\n/* harmony import */ var _img_seafood_arrosconmariscos_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../img/seafood/arrosconmariscos.jpg */ \"./src/img/seafood/arrosconmariscos.jpg\");\n/* harmony import */ var _img_seafood_ceviche_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../img/seafood/ceviche.jpg */ \"./src/img/seafood/ceviche.jpg\");\n/* harmony import */ var _img_seafood_chupe_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../img/seafood/chupe.jpg */ \"./src/img/seafood/chupe.jpg\");\n/* harmony import */ var _img_grill_grill_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../img/grill/grill.jpg */ \"./src/img/grill/grill.jpg\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\n\n\n\n\n\n\n\n\n\nvar Dishes = /*#__PURE__*/function () {\n  function Dishes(container) {\n    _classCallCheck(this, Dishes);\n\n    this.container = container;\n    this.main = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('main');\n    this.imgByRegion = [_img_coast_coast_jpg__WEBPACK_IMPORTED_MODULE_1__.default, _img_coast_sierra_jpg__WEBPACK_IMPORTED_MODULE_2__.default, _img_coast_selva_jpg__WEBPACK_IMPORTED_MODULE_3__.default];\n    this.imgPasta = [_img_pasta_lasagna_jpg__WEBPACK_IMPORTED_MODULE_4__.default, _img_pasta_ravioles_jpg__WEBPACK_IMPORTED_MODULE_5__.default, _img_pasta_spaghetti_jpg__WEBPACK_IMPORTED_MODULE_6__.default];\n    this.imgSeaFood = [_img_seafood_arrosconmariscos_jpg__WEBPACK_IMPORTED_MODULE_7__.default, _img_seafood_ceviche_jpg__WEBPACK_IMPORTED_MODULE_8__.default, _img_seafood_chupe_jpg__WEBPACK_IMPORTED_MODULE_9__.default];\n    this.imgGrill = [_img_grill_grill_jpg__WEBPACK_IMPORTED_MODULE_10__.default];\n  }\n\n  _createClass(Dishes, [{\n    key: \"subtitle\",\n    value: function subtitle(content) {\n      return (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('h3', \"\".concat(content));\n    }\n  }, {\n    key: \"article\",\n    value: function article(subtitle, images) {\n      var card = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('article', undefined, ['card']);\n      var imgcontainer = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('div', undefined, ['card__img-container']);\n      (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.createImageCollection)(imgcontainer, images);\n      card.append(this.subtitle(\"\".concat(subtitle)));\n      card.append(imgcontainer);\n      this.main.append(card);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      this.title;\n      this.article('Regional Dishes', this.imgByRegion);\n      this.article('Pastas', this.imgPasta);\n      this.article('Seafood', this.imgSeaFood);\n      this.article('Meat and Grill', this.imgGrill);\n      this.container.append(this.main);\n    }\n  }, {\n    key: \"title\",\n    get: function get() {\n      var title = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('h2', 'Our Dishes');\n      this.main.append(title);\n    }\n  }]);\n\n  return Dishes;\n}();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/components/dishes.js?");
+
+/***/ }),
+
+/***/ "./src/components/footer.js":
+/*!**********************************!*\
+  !*** ./src/components/footer.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Footer\": () => /* binding */ Footer\n/* harmony export */ });\n/* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common.js */ \"./src/components/common.js\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../img/logo.png */ \"./src/img/logo.png\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\nvar Footer = /*#__PURE__*/function () {\n  function Footer(container) {\n    _classCallCheck(this, Footer);\n\n    this.container = container;\n    this.footer = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('footer', [], ['footer']);\n  }\n\n  _createClass(Footer, [{\n    key: \"title\",\n    value: function title() {\n      var footerTitle = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('h4', 'La Reserva Restaurant');\n      this.footer.append(footerTitle);\n    }\n  }, {\n    key: \"location\",\n    value: function location() {\n      var address = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newList)(['footer-address', 'footer-number'], ['Av. La Marina 201', '650-8000']);\n      this.footer.append(address);\n    }\n  }, {\n    key: \"logo\",\n    value: function logo() {\n      var img = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('img');\n      img.src = _img_logo_png__WEBPACK_IMPORTED_MODULE_1__.default;\n      this.footer.append(img);\n    }\n  }, {\n    key: \"renderFooter\",\n    value: function renderFooter() {\n      this.title();\n      this.location();\n      this.logo();\n      this.container.append(this.footer);\n    }\n  }]);\n\n  return Footer;\n}();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/components/footer.js?");
 
 /***/ }),
 
@@ -56,7 +76,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/header */ \"./src/components/header.js\");\n/* harmony import */ var _components_carrousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/carrousel */ \"./src/components/carrousel.js\");\n/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/section */ \"./src/components/section.js\");\n\n\n\nvar nav = new _components_header__WEBPACK_IMPORTED_MODULE_0__.header();\nnav.render();\n(0,_components_carrousel__WEBPACK_IMPORTED_MODULE_1__.carrousel)();\nvar frame = new _components_section__WEBPACK_IMPORTED_MODULE_2__.section();\nframe.location();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/header */ \"./src/components/header.js\");\n/* harmony import */ var _components_carrousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/carrousel */ \"./src/components/carrousel.js\");\n/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/section */ \"./src/components/section.js\");\n/* harmony import */ var _components_dishes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/dishes */ \"./src/components/dishes.js\");\n/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/footer */ \"./src/components/footer.js\");\n\n\n\n\n\nvar container = document.querySelector('.content');\nvar nav = new _components_header__WEBPACK_IMPORTED_MODULE_0__.header();\nnav.render();\nvar dishes = new _components_dishes__WEBPACK_IMPORTED_MODULE_3__.Dishes(container);\ndishes.render();\nvar newfooter = new _components_footer__WEBPACK_IMPORTED_MODULE_4__.Footer(container);\nnewfooter.renderFooter();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/index.js?");
 
 /***/ }),
 
@@ -87,6 +107,116 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/banner3.png\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/banner/banner3.png?");
+
+/***/ }),
+
+/***/ "./src/img/coast/coast.jpg":
+/*!*********************************!*\
+  !*** ./src/img/coast/coast.jpg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/coast.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/coast/coast.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/coast/selva.jpg":
+/*!*********************************!*\
+  !*** ./src/img/coast/selva.jpg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/selva.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/coast/selva.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/coast/sierra.jpg":
+/*!**********************************!*\
+  !*** ./src/img/coast/sierra.jpg ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/sierra.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/coast/sierra.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/grill/grill.jpg":
+/*!*********************************!*\
+  !*** ./src/img/grill/grill.jpg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/grill.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/grill/grill.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/logo.png":
+/*!**************************!*\
+  !*** ./src/img/logo.png ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/logo.png\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/logo.png?");
+
+/***/ }),
+
+/***/ "./src/img/pasta/lasagna.jpg":
+/*!***********************************!*\
+  !*** ./src/img/pasta/lasagna.jpg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/lasagna.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/pasta/lasagna.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/pasta/ravioles.jpg":
+/*!************************************!*\
+  !*** ./src/img/pasta/ravioles.jpg ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/ravioles.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/pasta/ravioles.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/pasta/spaghetti.jpg":
+/*!*************************************!*\
+  !*** ./src/img/pasta/spaghetti.jpg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/spaghetti.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/pasta/spaghetti.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/seafood/arrosconmariscos.jpg":
+/*!**********************************************!*\
+  !*** ./src/img/seafood/arrosconmariscos.jpg ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/arrosconmariscos.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/seafood/arrosconmariscos.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/seafood/ceviche.jpg":
+/*!*************************************!*\
+  !*** ./src/img/seafood/ceviche.jpg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/ceviche.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/seafood/ceviche.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/seafood/chupe.jpg":
+/*!***********************************!*\
+  !*** ./src/img/seafood/chupe.jpg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/chupe.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/seafood/chupe.jpg?");
 
 /***/ })
 

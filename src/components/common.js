@@ -33,4 +33,14 @@ export const newList = (classes, texts) => {
     ul.append(li)
   })
   return ul;
-}
+};
+
+export const createImageCollection = (container, imgCollection) => {
+  imgCollection.forEach(img => {
+    const imgTag = newElment('img')
+    imgTag.src = img
+    container.append(imgTag)
+  });
+
+  return container
+};
