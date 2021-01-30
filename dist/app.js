@@ -60,6 +60,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/offers.js":
+/*!**********************************!*\
+  !*** ./src/components/offers.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Offer\": () => /* binding */ Offer\n/* harmony export */ });\n/* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common.js */ \"./src/components/common.js\");\n/* harmony import */ var _img_offers_prex_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../img/offers/prex.jpg */ \"./src/img/offers/prex.jpg\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\nvar Offer = /*#__PURE__*/function () {\n  function Offer(container) {\n    _classCallCheck(this, Offer);\n\n    this.container = container;\n    this.main = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('main');\n  }\n\n  _createClass(Offer, [{\n    key: \"render\",\n    value: function render() {\n      this.title;\n      this.banner;\n      this.container.append(this.main);\n    }\n  }, {\n    key: \"title\",\n    get: function get() {\n      var offersContainer = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('section', undefined, ['offers']);\n      var title = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('h2', 'Offers', ['offers__title']);\n      offersContainer.append(title);\n      this.main.append(offersContainer);\n    }\n  }, {\n    key: \"banner\",\n    get: function get() {\n      var imgContainer = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.newElment)('div', undefined, ['offers__img-container']);\n      (0,_common_js__WEBPACK_IMPORTED_MODULE_0__.createImageCollection)(imgContainer, [_img_offers_prex_jpg__WEBPACK_IMPORTED_MODULE_1__.default]);\n      this.main.append(imgContainer);\n    }\n  }]);\n\n  return Offer;\n}();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/components/offers.js?");
+
+/***/ }),
+
 /***/ "./src/components/section.js":
 /*!***********************************!*\
   !*** ./src/components/section.js ***!
@@ -76,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/header */ \"./src/components/header.js\");\n/* harmony import */ var _components_carrousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/carrousel */ \"./src/components/carrousel.js\");\n/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/section */ \"./src/components/section.js\");\n/* harmony import */ var _components_dishes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/dishes */ \"./src/components/dishes.js\");\n/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/footer */ \"./src/components/footer.js\");\n\n\n\n\n\nvar container = document.querySelector('.content');\nvar nav = new _components_header__WEBPACK_IMPORTED_MODULE_0__.header();\nnav.render();\nvar dishes = new _components_dishes__WEBPACK_IMPORTED_MODULE_3__.Dishes(container);\ndishes.render();\nvar newfooter = new _components_footer__WEBPACK_IMPORTED_MODULE_4__.Footer(container);\nnewfooter.renderFooter();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/header */ \"./src/components/header.js\");\n/* harmony import */ var _components_carrousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/carrousel */ \"./src/components/carrousel.js\");\n/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/section */ \"./src/components/section.js\");\n/* harmony import */ var _components_dishes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/dishes */ \"./src/components/dishes.js\");\n/* harmony import */ var _components_offers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/offers */ \"./src/components/offers.js\");\n/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/footer */ \"./src/components/footer.js\");\n\n\n\n\n\n\nvar container = document.querySelector('.content');\nvar nav = new _components_header__WEBPACK_IMPORTED_MODULE_0__.header();\nnav.render();\nvar offers = new _components_offers__WEBPACK_IMPORTED_MODULE_4__.Offer(container);\noffers.render();\nvar newfooter = new _components_footer__WEBPACK_IMPORTED_MODULE_5__.Footer(container);\nnewfooter.renderFooter();\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/index.js?");
 
 /***/ }),
 
@@ -157,6 +167,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/logo.png\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/logo.png?");
+
+/***/ }),
+
+/***/ "./src/img/offers/prex.jpg":
+/*!*********************************!*\
+  !*** ./src/img/offers/prex.jpg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/prex.jpg\");\n\n//# sourceURL=webpack://LaReserva_Restaurant/./src/img/offers/prex.jpg?");
 
 /***/ }),
 
