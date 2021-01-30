@@ -45,6 +45,18 @@ export const createImageCollection = (container, imgCollection) => {
   return container
 };
 
-export const createCards = (titles, images) => {
-  const card = newElment('article')
+export const createCards = (container, titles, images) => {
+  titles.forEach((title, idx) => {
+    const card = newElment('article', undefined, ['card']);
+    const cardTitle = newElment('h3', title, ['card__title']);
+    const cardImgContainer = newElment('div', undefined, ['card__img']);
+    const cardImg = newElment('img');
+    const cardBtn = newElment('div', 'buy', ['card__btn']);
+
+    cardImg.src = images[idx]
+    cardImgContainer.append(cardImg)
+
+    card.append(cardTitle, cardImgContainer, cardBtn)
+    container.append(card)
+  } )
 }

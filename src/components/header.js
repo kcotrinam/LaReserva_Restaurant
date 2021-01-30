@@ -13,10 +13,18 @@ export class header {
   }
 
   createLinks () {
+    const container = document.querySelector('.content');
     const header = this.createtitle()
-    const links = newLinks(['link1', 'link2', 'link3'], ['link1', 'link2', 'link3'], ['./', './', './']);
+    const links = newLinks(['link', 'link', 'link'], ['link1', 'link2', 'link3'], ['./', './', './']);
     header.append(links)
-    return header
+    container.append(header)
+    // return header
+  }
+
+  tabs () {
+    this.createLinks()
+    const links = [...document.querySelectorAll('.link')]
+    console.log(links)
   }
 
   render () {

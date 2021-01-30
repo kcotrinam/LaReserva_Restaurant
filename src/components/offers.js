@@ -26,16 +26,19 @@ export class Offer {
     this.main.append(imgContainer);
   }
 
-  get card () {
+  get displaycards () {
     const cardContainer = newElment('div', undefined, ['card-container']);
-    createCards(this.days, this.imageOffers)
+    const subtitle = newElment('h3', 'Weekly Offers', ['subtitle']);
+
+    cardContainer.append(subtitle)
+    createCards(cardContainer, this.days,  this.images)
     this.main.append(cardContainer);
   }
 
-  render() {
+  renderOffers() {
     this.title
     this.banner
-    this.card
+    this.displaycards
     this.container.append(this.main);
   }
 }

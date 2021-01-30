@@ -8,10 +8,8 @@ import { Footer } from './components/footer';
 
 const container = document.querySelector('.content')
 const nav = new header();
-nav.render()
-
-const offers = new Offer(container)
-offers.render()
+// nav.createLinks()
+nav.tabs()
 
 const newfooter = new Footer(container)
 newfooter.renderFooter()
