@@ -10,12 +10,13 @@ export class Home {
     for (let i = 0; i < amount; i++) {
       const frameContainer = newElment('div');
       const frame = newElment('iframe');
-      const aside = newElment('aside');
+      const aside = newElment('aside', undefined, ['frame__list']);
       const locationList = newList( 
                                     ['Miraflores - Av. Ricardo Palma 145', 'San Miguel - Av. La Marina 201', 'Comas - Alfredo Mendiola 1545'],
-                                    ['list-item', 'list-item', 'list-item']
+                                    ['frame__list-item', 'frame__list-item', 'frame__list-item']
                                   )
       frame.src = link
+      
     
       aside.append(locationList)
       frameContainer.append(frame, aside)
