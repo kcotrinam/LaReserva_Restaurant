@@ -12,8 +12,9 @@ export class Home {
       const frame = newElment('iframe');
       const aside = newElment('aside');
       const locationList = newList( 
-                            ['list-item', 'list-item', 'list-item'],
-                                    ['Miraflores - Av. Ricardo Palma 145', 'San Miguel - Av. La Marina 201', 'Comas - Alfredo Mendiola 1545'])
+                                    ['Miraflores - Av. Ricardo Palma 145', 'San Miguel - Av. La Marina 201', 'Comas - Alfredo Mendiola 1545'],
+                                    ['list-item', 'list-item', 'list-item']
+                                  )
       frame.src = link
     
       aside.append(locationList)

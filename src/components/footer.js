@@ -13,7 +13,10 @@ export class Footer {
   }
 
   location () {
-    const address = newList(['footer-address', 'footer-number'], ['Av. La Marina 201', '650-8000'])
+    const address = newList(
+                            ['Av. La Marina 201', '650-8000'],
+                            ['footer-address', 'footer-number']
+                            )
 
     this.footer.append(address)
   }

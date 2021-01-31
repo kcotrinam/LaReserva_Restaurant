@@ -24,7 +24,7 @@ export const newLinks = (classes, texts, links) => {
   return ul;
 }
 
-export const newList = (classes, texts) => {
+export const newList = (texts, classes) => {
   const ul = document.createElement('ul');
   texts.forEach((txt, idx) => {
     const li = document.createElement('li');
