@@ -3,12 +3,12 @@ import { newElment, newList } from './common.js';
 export class Home {
   constructor(container){
     this.container = container;
-    this.section = newElment('section');
+    this.section = newElment('section', undefined, ['frames-container']);
   }
 
   generateLocations (amount, link) {
     for (let i = 0; i < amount; i++) {
-      const frameContainer = newElment('div');
+      const frameContainer = newElment('div', undefined, ['frame-container']);
       const frame = newElment('iframe');
       const aside = newElment('aside', undefined, ['frame__list']);
       const locationList = newList( 
