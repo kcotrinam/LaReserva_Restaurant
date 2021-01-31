@@ -5,11 +5,12 @@ export class Footer {
   constructor(container){
     this.container = container;
     this.footer = newElment('footer', [], ['footer'])
+    this.footerLeft = newElment('div', [], ['footer__left'])
   }
 
   title () {
-    const footerTitle = newElment('h4', 'La Reserva Restaurant')
-    this.footer.append(footerTitle)
+    const footerTitle = newElment('h4', 'La Reserva Restaurant', ['footer__title'])
+    this.footerLeft.append(footerTitle)
   }
 
   location () {
@@ -18,7 +19,7 @@ export class Footer {
                             ['footer-address', 'footer-number']
                             )
 
-    this.footer.append(address)
+    this.footerLeft.append(address)
   }
 
   logo () {
@@ -28,6 +29,7 @@ export class Footer {
   }
 
   renderFooter() {
+    this.footer.append(this.footerLeft)
     this.title()
     this.location()
     this.logo()

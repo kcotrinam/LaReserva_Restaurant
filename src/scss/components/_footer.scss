@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+
+  & ul {
+    margin-top: 0.75rem;
+  }
+
+  & img {
+    max-width: 300px;
+    margin: auto;
+  }
+}
