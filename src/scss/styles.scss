@@ -4,6 +4,8 @@
 @import 'utils/functions';
 @import 'utils/helpers';
 @import 'layout/grid';
+@import 'base/common';
+@import 'components/header';
 
 .active-tab {
   color: red;

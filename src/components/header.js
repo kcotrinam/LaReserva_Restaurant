@@ -4,7 +4,7 @@ import { Tabs } from './tabs';
 export class Header {
   constructor(container, main){
     this.container = container;
-    this.header = newElment('header')
+    this.header = newElment('header', undefined, ['header'])
     this.main = main
   }
 
