@@ -5,15 +5,15 @@ import { Dishes } from './dishes';
 import { Offer } from './offers';
 
 export class Tabs {
-  constructor(container) {
+  constructor(container, main) {
     this.container = container;
     this.activeTab = 0;
-    this.main = newElment('main')
+    this.main = main
   }
 
   createTabs () {
     const navBar = newElment('nav', undefined, ['nav'])
-    const links = newLinks(['link', 'link', 'link'], ['link1', 'link2', 'link3'], ['#', '#', '#']);
+    const links = newLinks(['link', 'link', 'link'], ['Branches', 'dishes', 'Offers'], ['#', '#', '#']);
     navBar.append(links)
     this.container.append(navBar)
   }

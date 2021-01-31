@@ -1,4 +1,4 @@
-import { newElment, newLinks, newList } from './common.js';
+import { newElment, newList } from './common.js';
 
 export class Home {
   constructor(container){

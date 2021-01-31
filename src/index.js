@@ -1,15 +1,5 @@
-import { header } from './components/header';
-import { Tabs } from './components/tabs';
+import { Index } from './components/main';
 
-
-
-import { Footer } from './components/footer';
-import styles from './scss/styles.scss';
-
-const container = document.querySelector('.content')
-
-const headerContainer = new header(container);
-headerContainer.renderHeader()
-
-const foot = new Footer(container)
-foot.renderFooter()
+const container = document.querySelector('.content');
+const renderHome = new Index(container);
+renderHome.renderPage

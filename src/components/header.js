@@ -1,11 +1,11 @@
 import { newElment } from './common.js';
 import { Tabs } from './tabs';
 
-
-export class header {
-  constructor(container){
+export class Header {
+  constructor(container, main){
     this.container = container;
     this.header = newElment('header')
+    this.main = main
   }
 
   get createtitle () {
@@ -16,7 +16,7 @@ export class header {
   renderHeader () {
     this.createtitle
     this.container.append(this.header)
-    const tabsCollection = new Tabs(this.container)
+    const tabsCollection = new Tabs(this.container, this.main)
     tabsCollection.renderTabs()
   }
 }
