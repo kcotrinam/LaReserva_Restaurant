@@ -1,0 +1,7 @@
+.nav {
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(var(--navbar-columns), 1fr);
+  }
+}

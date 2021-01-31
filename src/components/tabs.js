@@ -13,14 +13,14 @@ export class Tabs {
 
   createTabs () {
     const navBar = newElment('nav', undefined, ['nav'])
-    const links = newLinks(['link', 'link', 'link'], ['Branches', 'dishes', 'Offers'], ['#', '#', '#']);
+    const links = newLinks(['tab', 'tab', 'tab'], ['Branches', 'dishes', 'Offers'], ['#', '#', '#']);
     navBar.append(links)
     this.container.append(navBar)
   }
 
   listenTabs () {
     this.createTabs();
-    const links = [...document.querySelectorAll('.link')];
+    const links = [...document.querySelectorAll('.tab')];
     this.setTab(links)
     this.AddActiveClass(links, this.activeTab);
   }
@@ -51,7 +51,7 @@ export class Tabs {
       case 0:
         const loc = new Home(this.main);
         carrousel(this.main)
-        loc.location()
+        loc.renderHome
         break;
       case 1:
         const dish = new Dishes(this.main);
