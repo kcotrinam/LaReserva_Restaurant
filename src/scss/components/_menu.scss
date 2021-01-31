@@ -1,0 +1,39 @@
+main {
+  margin-top: 0.75rem;
+
+  & h2 {
+    display: inline-block;
+    font-size: 2.75rem;
+    font-weight: bold;
+    padding-right: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 5px solid #ffe187;
+    
+  }
+
+  @include from(md) {
+    & .cards-container {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & h2 {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.card {
+  margin-top: 1.75rem;
+  
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__img-container {
+    max-height: 300px;
+  }
+}
+

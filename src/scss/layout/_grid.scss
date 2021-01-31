@@ -30,6 +30,18 @@ main {
   }
 }
 
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+
+  &__img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
+  }
+}
+
 .footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
