@@ -15,7 +15,7 @@ export class Index {
     newHeader.renderHeader()
     carrousel(this.main);
     const firstPage = new Home(this.main);
-    firstPage.location()
+    firstPage.renderHome
     this.container.append(this.main)
     const footer = new Footer(this.container)
     footer.renderFooter()
