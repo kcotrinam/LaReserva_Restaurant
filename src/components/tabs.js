@@ -51,7 +51,7 @@ export class Tabs {
       case 0:
         const loc = new Home(this.main);
         carrousel(this.main);
-        loc.renderHome;
+        loc.renderHome();
         break;
       case 1:
         const dish = new Dishes(this.main);
@@ -59,7 +59,7 @@ export class Tabs {
         break;
       default:
         const off = new Offer(this.main);
-        off.renderOffers;
+        off.renderOffers();
         break;
     }
   }

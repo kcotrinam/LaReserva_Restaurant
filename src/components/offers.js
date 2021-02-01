@@ -1,6 +1,6 @@
 import {
-  newElment, newLinks, newList, createImageCollection, createCards,
-} from './common.js';
+  newElment, createImageCollection, createCards,
+} from './common';
 import bannerImg from '../img/offers/prex.jpg';
 import mondayOffer from '../img/offers/prlunes.jpg';
 import tuesdayOffer from '../img/offers/prmartes.jpg';
@@ -17,7 +17,7 @@ export class Offer {
     this.offersContainer = newElment('div', undefined, ['offers-container']);
   }
 
-  get title() {
+  title() {
     this.container.innerHTML = '';
     const offersContainer = newElment('section', undefined, ['offers']);
     const title = newElment('h2', 'Offers', ['offers__title']);
@@ -25,13 +25,13 @@ export class Offer {
     this.main.append(offersContainer);
   }
 
-  get banner() {
+  banner() {
     const imgContainer = newElment('div', undefined, ['offers__img-container']);
     createImageCollection(imgContainer, [bannerImg]);
     this.main.append(imgContainer);
   }
 
-  get displaycards() {
+  displaycards() {
     const cardContainer = newElment('div', undefined, ['card-container']);
     const subtitle = newElment('h3', 'Weekly Offers', ['subtitle']);
 
@@ -41,10 +41,10 @@ export class Offer {
     this.main.append(this.offersContainer);
   }
 
-  get renderOffers() {
-    this.title;
-    this.banner;
-    this.displaycards;
+  renderOffers() {
+    this.title();
+    this.banner();
+    this.displaycards();
     this.container.append(this.main);
   }
 }
