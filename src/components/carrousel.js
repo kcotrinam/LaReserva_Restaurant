@@ -11,7 +11,7 @@ export const carrousel= (container) => {
   imgcontainer.src = img1
 
   setInterval(() => {
-    // displayCarrousel(imgcontainer, imgCollection)
+    displayCarrousel(imgcontainer, imgCollection);
   }, 1000);
   bannerContainer.append(imgcontainer)
   container.append(bannerContainer)
