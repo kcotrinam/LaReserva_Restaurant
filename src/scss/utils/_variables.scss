@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #ffe187;
+  --h1-size: 3.5rem;
+  --navbar-columns: 3;
+}
+
+$break-points: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
