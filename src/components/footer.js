@@ -1,4 +1,4 @@
-import { newElment, newList } from './common.js';
+import { newElment, newList } from './common';
 import logo from '../img/logo.png';
 
 export class Footer {

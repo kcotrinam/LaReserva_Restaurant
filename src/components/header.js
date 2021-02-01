@@ -1,4 +1,4 @@
-import { newElment } from './common.js';
+import { newElment } from './common';
 import { Tabs } from './tabs';
 
 export class Header {
@@ -8,13 +8,13 @@ export class Header {
     this.main = main;
   }
 
-  get createtitle() {
+  createtitle() {
     const title = newElment('h1', 'La Reserva Restaurant', ['title']);
     this.header.append(title);
   }
 
   renderHeader() {
-    this.createtitle;
+    this.createtitle();
     this.container.append(this.header);
     const tabsCollection = new Tabs(this.container, this.main);
     tabsCollection.renderTabs();
