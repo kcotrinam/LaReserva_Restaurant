@@ -26,18 +26,14 @@ export class Dishes {
     this.container.append(title);
   }
 
-  subtitle(content) {
-    return newElment('h3', `${content}`, ['card__title']);
-  }
-
   article(subtitle, images) {
     const card = newElment('article', undefined, ['card']);
     const imgcontainer = newElment('div', undefined, ['card__img-container']);
-
+    const cardSubtitle = newElment('h3', `${subtitle}`, ['card__title']);
 
     createImageCollection(imgcontainer, images);
 
-    card.append(this.subtitle(`${subtitle}`));
+    card.append(cardSubtitle);
     card.append(imgcontainer);
 
     this.cardsContainer.append(card);
