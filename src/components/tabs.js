@@ -55,7 +55,7 @@ export class Tabs {
         break;
       case 1:
         const dish = new Dishes(this.main);
-        dish.renderDishes;
+        dish.renderDishes();
         break;
       default:
         const off = new Offer(this.main);

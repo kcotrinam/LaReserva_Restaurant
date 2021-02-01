@@ -1,4 +1,4 @@
-import { newElment, newLinks, createImageCollection } from './common.js';
+import { newElment, createImageCollection } from './common';
 import coast from '../img/coast/coast.jpg';
 import sierra from '../img/coast/sierra.jpg';
 import selva from '../img/coast/selva.jpg';
@@ -43,7 +43,7 @@ export class Dishes {
     this.cardsContainer.append(card);
   }
 
-  get renderDishes() {
+  renderDishes() {
     this.title;
     this.container.append(this.cardsContainer);
     this.article('Regional Dishes', this.imgByRegion);
