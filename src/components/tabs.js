@@ -1,4 +1,4 @@
-import { newElment, newLinks } from './common.js';
+import { newElment, newLinks } from './common';
 import { carrousel } from './carrousel';
 import { Home } from './section';
 import { Dishes } from './dishes';
@@ -28,7 +28,7 @@ export class Tabs {
   setTab(tabs) {
     tabs.forEach((tab, idx) => {
       tab.addEventListener('click', () => {
-        this.removeActiveTabs(tabs);
+        Tabs.removeActiveTabs(tabs);
         this.activeTab = idx;
         this.AddActiveClass(tabs);
         this.displayContent(this.activeTab);
@@ -40,7 +40,7 @@ export class Tabs {
     linksCollection[this.activeTab].classList.add('active-tab');
   }
 
-  removeActiveTabs(tabs) {
+  static removeActiveTabs(tabs) {
     tabs.forEach(tab => {
       tab.classList.remove('active-tab');
     });
@@ -48,19 +48,22 @@ export class Tabs {
 
   displayContent(tabIdx) {
     switch (tabIdx) {
-      case 0:
+      case 0: {
         const loc = new Home(this.main);
         carrousel(this.main);
         loc.renderHome();
         break;
-      case 1:
+      }
+      case 1: {
         const dish = new Dishes(this.main);
         dish.renderDishes();
         break;
-      default:
+      }
+      default: {
         const off = new Offer(this.main);
         off.renderOffers();
         break;
+      }
     }
   }
 
