@@ -1,6 +1,6 @@
 import { newElment, newList } from './common';
 
-export class Home {
+export default class Home {
   constructor(container) {
     this.container = container;
     this.section = newElment('section', undefined, ['frames-container']);

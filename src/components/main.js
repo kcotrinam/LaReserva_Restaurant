@@ -1,7 +1,7 @@
 import { newElment } from './common';
 import Header from './header';
 import carrousel from './carrousel';
-import { Home } from './section';
+import Home from './section';
 import Footer from './footer';
 
 export default class Index {

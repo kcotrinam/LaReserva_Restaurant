@@ -8,7 +8,7 @@ import wednesdayOffer from '../img/offers/prmiercoles.jpg';
 import thursdayOffer from '../img/offers/prjueves.png';
 import fridayOffer from '../img/offers/prfin.jpg';
 
-export class Offer {
+export default class Offer {
   constructor(container) {
     this.container = container;
     this.main = newElment('main');

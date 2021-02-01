@@ -1,10 +1,10 @@
 import { newElment, newLinks } from './common';
 import carrousel from './carrousel';
-import { Home } from './section';
+import Home from './section';
 import Dishes from './dishes';
-import { Offer } from './offers';
+import Offer from './offers';
 
-export class Tabs {
+export default class Tabs {
   constructor(container, main) {
     this.container = container;
     this.activeTab = 0;

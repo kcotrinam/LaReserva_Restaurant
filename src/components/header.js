@@ -1,5 +1,5 @@
 import { newElment } from './common';
-import { Tabs } from './tabs';
+import Tabs from './tabs';
 
 export default class Header {
   constructor(container, main) {
