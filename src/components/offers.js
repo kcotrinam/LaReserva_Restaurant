@@ -10,7 +10,8 @@ export class Offer {
     this.container = container;
     this.main = newElment('main');
     this.days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-    this.images = [mondayOffer, tuesdayOffer, wednesdayOffer, thursdayOffer, fridayOffer]
+    this.images = [mondayOffer, tuesdayOffer, wednesdayOffer, thursdayOffer, fridayOffer];
+    this.offersContainer = newElment('div', undefined, ['offers-container'])
   }
 
   get title () {
@@ -32,8 +33,9 @@ export class Offer {
     const subtitle = newElment('h3', 'Weekly Offers', ['subtitle']);
 
     cardContainer.append(subtitle)
-    createCards(cardContainer, this.days,  this.images)
+    createCards(this.offersContainer, this.days,  this.images)
     this.main.append(cardContainer);
+    this.main.append(this.offersContainer);
   }
 
   get renderOffers() {

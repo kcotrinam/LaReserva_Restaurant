@@ -42,6 +42,12 @@ main {
   }
 }
 
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 1rem;
+}
+
 .footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
