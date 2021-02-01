@@ -1,7 +1,16 @@
-import { newElment } from './common.js';
+import { newElment } from './common';
 import img1 from '../img/banner/banner1.png';
 import img2 from '../img/banner/banner2.png';
 import img3 from '../img/banner/banner3.png';
+
+let n = 0;
+const displayCarrousel = (carrouselContainer, img) => {
+  if (n > 2) {
+    n = 0;
+  }
+  carrouselContainer.src = img[n];
+  n += 1;
+};
 
 export const carrousel = (container) => {
   container.innerHTML = '';
@@ -15,13 +24,4 @@ export const carrousel = (container) => {
   }, 1000);
   bannerContainer.append(imgcontainer);
   container.append(bannerContainer);
-};
-
-let n = 0;
-const displayCarrousel = (carrouselContainer, img) => {
-  if (n > 2) {
-    n = 0;
-  }
-  carrouselContainer.src = img[n];
-  n++;
 };
