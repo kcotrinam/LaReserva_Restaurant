@@ -1,6 +1,6 @@
 .nav {
   border-radius: 10px 1px 0 0;
-  
+
   & .tab {
     display: block;
     width: 100%;
@@ -11,10 +11,9 @@
     padding: 0.5rem 0;
 
     &:not(.active-tab):hover {
-      background: darken(#ffe187, 10);
+      background: rgb(255, 225, 95);
     }
   }
-
 }
 
 .active-tab {

@@ -3,7 +3,9 @@
     @media screen and (min-width: map_get($break-points, $bp)) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @media screen and (min-width: $bp) {
       @content;
     }
