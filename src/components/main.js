@@ -7,17 +7,17 @@ import { Footer } from './footer';
 export class Index {
   constructor(container) {
     this.container = container;
-    this.main = newElment('main')
+    this.main = newElment('main');
   }
 
-  get renderPage () {
-    const newHeader = new Header(this.container, this.main)
-    newHeader.renderHeader()
+  get renderPage() {
+    const newHeader = new Header(this.container, this.main);
+    newHeader.renderHeader();
     carrousel(this.main);
     const firstPage = new Home(this.main);
-    firstPage.renderHome
-    this.container.append(this.main)
-    const footer = new Footer(this.container)
-    footer.renderFooter()
+    firstPage.renderHome;
+    this.container.append(this.main);
+    const footer = new Footer(this.container);
+    footer.renderFooter();
   }
 }

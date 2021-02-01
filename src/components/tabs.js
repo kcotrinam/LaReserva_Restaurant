@@ -8,64 +8,64 @@ export class Tabs {
   constructor(container, main) {
     this.container = container;
     this.activeTab = 0;
-    this.main = main
+    this.main = main;
   }
 
-  createTabs () {
-    const navBar = newElment('nav', undefined, ['nav'])
+  createTabs() {
+    const navBar = newElment('nav', undefined, ['nav']);
     const links = newLinks(['tab', 'tab', 'tab'], ['Branches', 'dishes', 'Offers'], ['#', '#', '#']);
-    navBar.append(links)
-    this.container.append(navBar)
+    navBar.append(links);
+    this.container.append(navBar);
   }
 
-  listenTabs () {
+  listenTabs() {
     this.createTabs();
     const links = [...document.querySelectorAll('.tab')];
-    this.setTab(links)
+    this.setTab(links);
     this.AddActiveClass(links, this.activeTab);
   }
 
-  setTab (tabs) {
+  setTab(tabs) {
     tabs.forEach((tab, idx) => {
       tab.addEventListener('click', () => {
-        this.removeActiveTabs(tabs)
-        this.activeTab = idx
-        this.AddActiveClass(tabs)
-        this.displayContent(this.activeTab)
-      })
+        this.removeActiveTabs(tabs);
+        this.activeTab = idx;
+        this.AddActiveClass(tabs);
+        this.displayContent(this.activeTab);
+      });
     });
   }
 
-  AddActiveClass (linksCollection) {
-    linksCollection[this.activeTab].classList.add('active-tab')
+  AddActiveClass(linksCollection) {
+    linksCollection[this.activeTab].classList.add('active-tab');
   }
 
-  removeActiveTabs (tabs) {
+  removeActiveTabs(tabs) {
     tabs.forEach(tab => {
-      tab.classList.remove('active-tab')
-    })
+      tab.classList.remove('active-tab');
+    });
   }
 
-  displayContent (tabIdx) {
+  displayContent(tabIdx) {
     switch (tabIdx) {
       case 0:
         const loc = new Home(this.main);
-        carrousel(this.main)
-        loc.renderHome
+        carrousel(this.main);
+        loc.renderHome;
         break;
       case 1:
         const dish = new Dishes(this.main);
-        dish.renderDishes
+        dish.renderDishes;
         break;
       default:
-        const off = new Offer(this.main)
-        off.renderOffers
+        const off = new Offer(this.main);
+        off.renderOffers;
         break;
     }
   }
 
-  renderTabs () {
-    this.listenTabs()
-    this.container.append(this.main)
+  renderTabs() {
+    this.listenTabs();
+    this.container.append(this.main);
   }
 }

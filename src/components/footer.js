@@ -1,39 +1,38 @@
 import { newElment, newList } from './common.js';
-import logo from './../img/logo.png';
+import logo from '../img/logo.png';
 
 export class Footer {
-  constructor(container){
+  constructor(container) {
     this.container = container;
-    this.footer = newElment('footer', [], ['footer'])
-    this.footerLeft = newElment('div', [], ['footer__left'])
+    this.footer = newElment('footer', [], ['footer']);
+    this.footerLeft = newElment('div', [], ['footer__left']);
   }
 
-  title () {
-    const footerTitle = newElment('h4', 'La Reserva Restaurant', ['footer__title'])
-    this.footerLeft.append(footerTitle)
+  title() {
+    const footerTitle = newElment('h4', 'La Reserva Restaurant', ['footer__title']);
+    this.footerLeft.append(footerTitle);
   }
 
-  location () {
+  location() {
     const address = newList(
-                            ['Av. La Marina 201', '650-8000'],
-                            ['footer-address', 'footer-number']
-                            )
+      ['Av. La Marina 201', '650-8000'],
+      ['footer-address', 'footer-number'],
+    );
 
-    this.footerLeft.append(address)
+    this.footerLeft.append(address);
   }
 
-  logo () {
-    const img = newElment('img')
-    img.src = logo
-    this.footer.append(img)
+  logo() {
+    const img = newElment('img');
+    img.src = logo;
+    this.footer.append(img);
   }
 
   renderFooter() {
-    this.footer.append(this.footerLeft)
-    this.title()
-    this.location()
-    this.logo()
-    this.container.append(this.footer)
+    this.footer.append(this.footerLeft);
+    this.title();
+    this.location();
+    this.logo();
+    this.container.append(this.footer);
   }
-
 }
