@@ -1,10 +1,10 @@
 import { newElment } from './common';
-import { Header } from './header';
+import Header from './header';
 import carrousel from './carrousel';
 import { Home } from './section';
 import Footer from './footer';
 
-export class Index {
+export default class Index {
   constructor(container) {
     this.container = container;
     this.main = newElment('main');

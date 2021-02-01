@@ -1,7 +1,7 @@
 import { newElment } from './common';
 import { Tabs } from './tabs';
 
-export class Header {
+export default class Header {
   constructor(container, main) {
     this.container = container;
     this.header = newElment('header', undefined, ['header']);
