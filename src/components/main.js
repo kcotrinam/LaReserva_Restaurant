@@ -1,8 +1,8 @@
 import { newElment } from './common';
 import { Header } from './header';
-import { carrousel } from './carrousel';
+import carrousel from './carrousel';
 import { Home } from './section';
-import { Footer } from './footer';
+import Footer from './footer';
 
 export class Index {
   constructor(container) {

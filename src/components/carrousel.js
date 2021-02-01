@@ -12,7 +12,7 @@ const displayCarrousel = (carrouselContainer, img) => {
   n += 1;
 };
 
-export const carrousel = (container) => {
+const carrousel = (container) => {
   container.innerHTML = '';
   const imgCollection = [img1, img2, img3];
   const bannerContainer = newElment('div', undefined, ['baner-container']);
@@ -25,3 +25,5 @@ export const carrousel = (container) => {
   bannerContainer.append(imgcontainer);
   container.append(bannerContainer);
 };
+
+export { carrousel as default };

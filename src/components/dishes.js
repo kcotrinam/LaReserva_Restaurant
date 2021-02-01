@@ -10,7 +10,7 @@ import ceviche from '../img/seafood/ceviche.jpg';
 import chupe from '../img/seafood/chupe.jpg';
 import grill from '../img/grill/grill.jpg';
 
-export class Dishes {
+export default class Dishes {
   constructor(container) {
     this.container = container;
     this.cardsContainer = newElment('section', undefined, ['cards-container']);

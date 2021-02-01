@@ -1,7 +1,7 @@
 import { newElment, newLinks } from './common';
-import { carrousel } from './carrousel';
+import carrousel from './carrousel';
 import { Home } from './section';
-import { Dishes } from './dishes';
+import Dishes from './dishes';
 import { Offer } from './offers';
 
 export class Tabs {

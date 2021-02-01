@@ -1,7 +1,7 @@
 import { newElment, newList } from './common';
 import logo from '../img/logo.png';
 
-export class Footer {
+export default class Footer {
   constructor(container) {
     this.container = container;
     this.footer = newElment('footer', [], ['footer']);
