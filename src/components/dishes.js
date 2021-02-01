@@ -20,7 +20,7 @@ export class Dishes {
     this.imgGrill = [grill];
   }
 
-  get title() {
+  title() {
     this.container.innerHTML = '';
     const title = newElment('h2', 'Our Dishes');
     this.container.append(title);
@@ -44,7 +44,7 @@ export class Dishes {
   }
 
   renderDishes() {
-    this.title;
+    this.title();
     this.container.append(this.cardsContainer);
     this.article('Regional Dishes', this.imgByRegion);
     this.article('Pastas', this.imgPasta);
