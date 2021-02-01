@@ -10,12 +10,12 @@ export class Index {
     this.main = newElment('main');
   }
 
-  get renderPage() {
+  renderPage() {
     const newHeader = new Header(this.container, this.main);
     newHeader.renderHeader();
     carrousel(this.main);
     const firstPage = new Home(this.main);
-    firstPage.renderHome;
+    firstPage.renderHome();
     this.container.append(this.main);
     const footer = new Footer(this.container);
     footer.renderFooter();

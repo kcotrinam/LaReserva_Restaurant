@@ -29,7 +29,7 @@ export class Home {
     // this.container.innerHTML = '';
   }
 
-  get renderHome() {
+  renderHome() {
     this.location;
     this.container.append(this.section);
   }
